@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.09.3
+! Version: 26.11.10.1
 
 !! Merged rules
 
@@ -8462,6 +8462,8 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||pp3-sdkdata-v2.profilepassport.jp^
+||lw-c-log.lastwarapp.net^
 ||mkt.supercell.com^
 ||collector.snowplow.supercell.com^
 ||api-abtest-cdn.learnings.ai^
@@ -9867,6 +9869,16 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||check24.de/files/give_img.php
+||chat.bot.check24.de/faro/collect
+||search.check24.de/tag.gif
+||ketchcdn.com/web/v*/log?
+||billiger.de/l/
+||cm-dynamic.billiger.de/delivery/info/?id=
+||api.poool.fr/api/*/access/events.track.pageView
+||rf.nfl.com/ping/
+||winfuture.de/ajax/zs
+||rivo.vin/api/*/view
 ||knshow.com/ab?
 /api/track|$domain=turizmguncel.com|brutto-netto-rechner.digital
 ||winfuture.de/wfk/?id=GTM-
@@ -10035,7 +10047,7 @@ carparts.com,kupibilet.ru#%#//scriptlet('set-local-storage-item', 'optimizely-vu
 s.response.jp##.vsi-pickup-list
 ||status.tbank-online.com/front/log/
 ||ispazio.net/wp-content/plugins/wc-site-stats/
-app.socios.com#%#//scriptlet('set-local-storage-item', 'deviceId', '$remove$')
+nfl.com,app.socios.com#%#//scriptlet('set-local-storage-item', 'deviceId', '$remove$')
 ||im.np-payment-gateway.com/bff/atone/event/tracking
 ||storage.googleapis.com/*/js/comscore.js
 ||eurozpravy.cz/js/matomo-events.js
@@ -15895,7 +15907,7 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ztat.net/*/webtrekk.min.js^
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
-! 
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/246720
 !#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
 ||zeelool.com/*-metrics/
@@ -20785,6 +20797,7 @@ analytics-*.aasaam.com
 ://collect.*/pageview
 ://collector.*/event
 ://data.*/v1/interact?
+://data.*=L2cvY29sbGVjd
 ://datacollector.*/event
 ://dwh-prod.*/de.npg/
 ://elqtrk.
@@ -25295,6 +25308,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ma.register.it^
 ||mediaset.it/cgi-bin/getcod.cgi?
 ||mtv.it/flux/trackingcodes/
+||naxos.lastampausa.com^
 ||paginebianche.it/cgi-bin/jbimpres.cgi?
 ||paginebianche.it/ip?dv=
 ||paginegialle.it/cgi-bin/getcod.cgi?
@@ -26028,6 +26042,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||log.ttbc-hcm.gov.vn^
 ||logsbin.dantri.com.vn^
 ||pixel.coccoc.com^
+||rivo.vin/api/*/view
 ||rivo.vin/rivo-stealer/
 ||tka.tiki.vn/pixel/
 ||track-srv.vietnamnet.vn^
@@ -28571,6 +28586,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||showstopped.com/owa/modules/base/dist/owa.tracker.js
 ||shrinetheme.com/api/analytics/
 ||shrtfly.vip/js/tag.js
+||sierra.chat/-/api/events
 ||sinajs.cn/open/analytics/
 ||sitebooster.com/sb/wix/p?$third-party
 ||sitecorecloud.io/v1/events/
