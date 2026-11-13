@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.13.2
+! Version: 26.11.13.3
 
 !! Merged rules
 
@@ -9871,6 +9871,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||zkrainynba.com/wp-content/themes/zkrainynba/assets/js/events-ga*.min.js
 ||avbase.app/api/vitals?
 ||static.revechat.com/widget/scripts/analytics/
 ||memorial.com.tr/cxgt/
@@ -27728,6 +27729,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||jobvite.com/analytics.js
 ||jotform.io/getReferrer/$third-party
 ||js.cdn.applicationinsights.io/scripts/b/ai.3.gbl.min.js
+||js.ciphera.net/script.js
 ||js.dashfi.net/dashfinet-analytics.js
 ||js.eruptr.io/epd.js
 ||js.go2sdk.com/v2/tune.js
