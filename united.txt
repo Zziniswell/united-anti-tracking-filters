@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.14.3
+! Version: 26.11.15.1
 
 !! Merged rules
 
@@ -27143,6 +27143,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||d2gt2ux04o03l1.cloudfront.net^
 ||dadi.technology^$third-party
 ||dash.getsitecontrol.com^
+||dash.kryon.one^
 ||dashboard.nowdialogue.com/api/events/
 ||data.circulate.com^
 ||data.debugbear.com^$third-party
