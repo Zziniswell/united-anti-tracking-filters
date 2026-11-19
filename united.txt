@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.19.3
+! Version: 26.11.20.1
 
 !! Merged rules
 
@@ -9873,6 +9873,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||kasemato.net/wp-content/themes/kasemato/assets/access-analytics.js
+||kasemato.net/wp-content/themes/kasemato/assets/frame-stats.js
 ||strike.fox.com/static/fnc/video/Prebidbidder.js
 ||strike.fox.com/static/fnc/video/Amazonbidder.js
 ||static.foxnews.com/static/isa/app/lib/VisitorAPI.orig.js
@@ -25543,6 +25545,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||j1.ax.xrea.com^
 ||k-crm.jp/tracking.js
 ||kabu-sokuhou.com/js/cpv/
+||kasemato.net/wp-content/themes/kasemato/assets/access-analytics.js
+||kasemato.net/wp-content/themes/kasemato/assets/frame-stats.js
 ||knshow.com/ab?
 ||kojima.net/excludes/KPC/js/kjm_gtm.js
 ||korewaeroi.com/fukugan_$subdocument
@@ -27070,6 +27074,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||cnstrc.com/behavior?
 ||cnzz.com/stat.
 ||cod.bitrec.com^
+||code.trygravity.ai/gr-pix.js
 ||codedrink.com/api/inbound
 ||coefficy.com/ip/
 ||coherentpath.com/tracker/
@@ -27273,6 +27278,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||dgcollector.evidon.com^
 ||diagnose.igstatic.com^
 ||dig.ultimedia.com^
+||digifaro-digital.uk.monitoringsolutions.sky^
 ||digimedia.com/pageviews.php?
 ||digitaloceanspaces.com/pixel.min.js
 ||digitaloceanspaces.com/pixel/
@@ -28330,6 +28336,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||petametrics.com/*/activity
 ||petametrics.com/*/modal
 ||pets.channeladvisor.com^
+||ph.cto.new^
 ||photobox.com/event
 ||photobox.com/logs
 ||phrasetech.com/api/collect
