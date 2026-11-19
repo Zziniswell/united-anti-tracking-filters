@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.19.2
+! Version: 26.11.19.3
 
 !! Merged rules
 
@@ -9798,7 +9798,7 @@ d4?appid*type*
 !
 ! Tealium
 ! The site should be carefully checked when you add this rule
-||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com|the-sun.com|lavazza.com|greenmangamingbundles.com
+||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com|the-sun.com|lavazza.com|greenmangamingbundles.com|paramountplus.com
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=yousee.dk|sibreal.org|calvinklein.ca|hosteurope.de|news.com.au|lavazza.com
 !
 !
@@ -18561,6 +18561,7 @@ analytics-*.aasaam.com
 /collect/view_count?
 /collect?appName
 /collect?callback=
+/collect?configId=
 /collect?d=
 /collect?data=
 /collect?eid=
@@ -19135,6 +19136,7 @@ analytics-*.aasaam.com
 /i.php?i=
 /i.png?id=
 /i/api/kn/afterclick/*$~third-party,xmlhttprequest
+/i/v0/e/*
 /i2a.js
 /i2yesCounter.js
 /i?e=pv&url=
@@ -19606,6 +19608,9 @@ analytics-*.aasaam.com
 /orichipixel.min.js
 /ot_e404.gif?
 /OtAutoBlock.js
+/otel/v1/logs
+/otel/v1/metrics
+/otel/v1/traces
 /ouibounce.min.js
 /outbrain.js$~xmlhttprequest
 /outbrainAd.
@@ -22405,6 +22410,7 @@ omni.soundestlink.com$image
 ||inq.com/tagserver/logging/logline
 ||insideevs.com/analytics.js
 ||insights-mxp-cdn.coursecareers.com^
+||insights.builderprofile.aws.dev^
 ||instagram.com/ajax/bz
 ||instagram.com/ajax/qm/?
 ||instructables.com/counter
@@ -22680,6 +22686,7 @@ omni.soundestlink.com$image
 ||mtg.macpaw.com^
 ||mtm.bondagevalley.cc^
 ||mtrics.cdc.gov^
+||muse.ai/api/auth/caa-events
 ||musescore.com/components/data?
 ||musescore.com/components/log/$ping
 ||musescore.com/score/stats/
@@ -22758,6 +22765,7 @@ omni.soundestlink.com$image
 ||ocular.hotukdeals.com^
 ||ocular.pepperdeals.com^
 ||odysee.com/reports/
+||offloop.org/_vid/v1/collect
 ||ohm-dot-hackster-io.appspot.com^
 ||oklink.com/jsstat/
 ||okx.com/jsstat/sb?
@@ -22796,6 +22804,7 @@ omni.soundestlink.com$image
 ||p.ost2.fyi/event^
 ||p.sfx.ms/is/invis.gif
 ||p.spotidownloader.com^
+||p.teamily.ai^
 ||pac.thescottishsun.co.uk^
 ||pac.thesun.co.uk^
 ||pac.thetimes.com^
@@ -23270,7 +23279,6 @@ omni.soundestlink.com$image
 ||strtapewithadblock.xyz/stat/
 ||strtpe.link/stat/
 ||stubhub.com/a/icph
-||stuff.co.nz/otel/
 ||stytch.com/sdk/v1/events
 ||suaurl.com/adblock/js/smarttag.js
 ||substrate.office.com/search/api/v1/events
@@ -23432,7 +23440,6 @@ omni.soundestlink.com$image
 ||tms.hft.greenchef.com^
 ||tms.hft.hellofresh.com^
 ||tnaflix.com/stats.php
-||together.ai/otel/v1/traces
 ||toms.com/*/FacebookCAPI-Event
 ||toms.com/*/PinterestCAPI-Event
 ||tongji-res.meizu.com^
@@ -25575,7 +25582,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||nvapi.nicovideo.jp/v1/bandit-machine/
 ||odsyms15.com/impression?
 ||oita-press.co.jp/js2020/analytics.js
-||portal.kotodaman.jp/api/otel/v1/logs
 ||pvtag.yahoo.co.jp^
 ||pw.gigazine.net^
 ||pzd.rakuten.co.jp^
@@ -27274,6 +27280,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||direct-collect.dy-api.eu^
 ||direct-events-collector.spot.im^
 ||directnews.co.uk/feedtrack/
+||directory.cookieyes.com/api/v1/ip
 ||discovery.evvnt.com/prd/evvnt_discovery_plugin-latest.min.js
 ||disqus.com/api/ping
 ||disqus.com/event.js?$script
