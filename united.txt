@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.20.3
+! Version: 26.11.21.1
 
 !! Merged rules
 
@@ -6224,6 +6224,8 @@ mcp.directory#%#//scriptlet('remove-cookie', 'dotcom_user')
 ||amazon.com^$cookie=aws-target-session-id
 ||amazon.com^$cookie=aws-target-visitor-id
 ||amazon.com^$cookie=aws-vid
+! amazon.*
+||amazon.*^$cookie=csm-hit
 ! yellowpages.com
 ||yellowpages.com^$cookie=vrid
 ! spooncast.net
@@ -9876,6 +9878,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||seznam.cz/*/hit|
+||seznam.cz/*/imp?k=
+||fls-eu.amazon.de/*batch/*uedata*Gateway
 ||ev.chitchat.tv/e/
 ||ev.chitchat.tv/i/*/e/
 ||kasemato.net/wp-content/themes/kasemato/assets/access-analytics.js
@@ -25632,9 +25637,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ssai.api.streaks.jp/*/ad_info?
 ||stat.i3.dmm.com/plus/tracking.js
 ||stats.nhk.or.jp^
-||sy.ameba.jp^
-||sy.amebame.com^
-||sy.ameblo.jp^
 ||t.rentio.jp^
 ||t.syosetu.org^
 ||tanweb.net/wordpress/?rest_route=/sng/v1/page-count
@@ -27508,6 +27510,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||feedblitz.com/imp?$third-party
 ||feedblitz.com^*.gif?$third-party
 ||feedify.net/thirdparty/json/track/
+||feliz.data.tm-awx.com/netro-web/batch
 ||feliz.data.tm-awx.com/smile-web-v2/batch
 ||fem.gprod.postmedia.digital/*/IIQUniversalID.js
 ||fgip.rosehosting.com^
