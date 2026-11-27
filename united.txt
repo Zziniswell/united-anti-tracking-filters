@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.27.3
+! Version: 26.11.28.1
 
 !! Merged rules
 
@@ -30,6 +30,11 @@
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://x.com/KonoTsuranori/status/2126243309400342533
+ekitan.com#%#//scriptlet('set-constant', 'executeImpressionTicketTracking', 'noopFunc')
+ekitan.com#%#//scriptlet('set-constant', 'initHomesTracking', 'noopFunc')
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||ekitan.com/transit/js/ticket-analytics.js$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/247930
 @@||fp.yangcong345.com/*/webTrack.js$domain=school.yangcongxueyuan.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/247621
@@ -17720,6 +17725,7 @@ analytics-*.aasaam.com
 @@||dmp.im-apps.net/pms/*/pmt.js$domain=zakzak.co.jp
 @@||docodoco.jp^*/docodoco?key=$script,domain=jrtours.co.jp
 @@||e-stat.go.jp/modules/custom/retrieve/src/js/stat.js?$script,~third-party
+@@||ekitan.com/transit/js/ticket-analytics.js$~third-party
 @@||ev.tpocdm.com^$xmlhttprequest,domain=wowma.jp
 @@||f-gear.ec-optimizer.com/img/spacer.gif$image,domain=ec.f-gear.co.jp
 @@||f-gear.ec-optimizer.com/search4.do$script,domain=ec.f-gear.co.jp
