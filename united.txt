@@ -6,7 +6,7 @@
 ! Title: AdGuard Tracking Protection filter + EasyPrivacy
 ! Description: DNS 필터링으로 커버할 수 있는 퍼스트 파티 도메인 전체 차단 규칙을 제외했습니다.
 ! Expires: 8 hours
-! Version: 26.11.27.2
+! Version: 26.11.27.3
 
 !! Merged rules
 
@@ -9884,6 +9884,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||streamvsmov.com/api/embed-hit|
+||daophim.*/metrics/
 ||cdn.tmtarget.com/tracking/
 ||pazarama.com/event-collector-worker.js
 ||busbud.com/metrics/
@@ -16436,6 +16438,7 @@ vkcdnservice.appspot.com^
 ||countly.
 ||countly-
 |piwik.
+||telemetry.*.oci.oraclecloud.com^
 ||analytics.dulo.
 ||cnt.iceporn.
 ||sw.vidmoly.
@@ -20044,6 +20047,7 @@ analytics-*.aasaam.com
 /screencount?vcid=
 /scribd_events?
 /script.outbound-links.js
+/script.outbound-links.pageview-props.js
 /script.outbound-links.pageview-props.revenue.js
 /script.tagged-events.js
 /script/pixel.js
@@ -28606,6 +28610,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||quora.com/_/ad/
 ||quora.com/qevents.js
 ||qzzr.com/_uid.gif
+||r.lr-hv-in.com^
 ||r.mail.ru^$script
 ||r.sdiapi.net^
 ||r.skimresources.com^
@@ -29417,7 +29422,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||unibet.de/stan/campaign.do?*&affiliateId=$subdocument,third-party
 ||unifyintent.com/analytics/
 ||units.knotch.it^
-||unpkg.com/web-vitals?
+||unpkg.com/web-vitals
 ||upsell-app.logbase.io/metrics
 ||uptime.com/static/rum/$third-party
 ||uptime.fastrr.com^
@@ -29574,6 +29579,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||widgetserver.com^*/image.gif?
 ||win.staticstuff.net^
 ||witbee.com^*/collect
+||wkbrs1.tingyun.com^
 ||wl-pixel.index.digital^
 ||wn.com/count.js
 ||wogaa.sg/scripts/wogaa.js
